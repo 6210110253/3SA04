@@ -5,10 +5,16 @@ import { useState, useEffect } from 'react';
 import Forecast from './Forecast';
 
 export default function Weather(props){
+    const [forecastInfo, setForecastInfo] = useState({
+        main: "-",
+        description: "-",
+        temp: 0
+    })
+
         useEffect(() => {
         console.log(`fetching data with zipCode = ${props.zipCode}`)
         if (props.zipCode) {
-            fetch(`http://api.openweathermap.org/data/2.5/weather?q=${props.zipCode},th&units=metric&APPID=42a269604b0b2bbd587f49ce349dfac4`)
+            fetch(`http://api.openweathermap.org/data/2.5/weather?q=${props.zipCode},th&units=metric&APPID=4861b7b0c3729227d0c8ca7da4f2e133`)
             .then((response) => response.json())
             .then((json) => {
                 setForecastInfo({
@@ -23,11 +29,7 @@ export default function Weather(props){
  }
  }, [props.zipCode])
 
-    const [forecastInfo, setForecastInfo] = useState({
-        main: "-",
-        description: "-",
-        temp: 0
-    })
+    
 
     return (
            <ImageBackground source={require('../img.jpg')} style={styles.backdrop}>
