@@ -54,6 +54,12 @@ const styles = StyleSheet.create({
   },
   zipPlace: {
     flex: 1,
+    fontSize: 25,
+    color: "blue",
+    textAlign: "center",
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 10,
+    textShadowColor: "black",
   },
   zipCode: {
     flex: 1,
