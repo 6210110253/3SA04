@@ -63,5 +63,11 @@ const styles = StyleSheet.create({
   },
   zipCode: {
     flex: 1,
+    fontSize: 25,
+    color: "blue",
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 10,
+    textShadowColor: "black",
+    textAlign: "center",
   },
 });
