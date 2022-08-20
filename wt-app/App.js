@@ -1,8 +1,13 @@
+import { StatusBar } from "expo-status-bar";
 import React from "react";
+import { StyleSheet, View } from "react-native";
+import Weather from "./components/Weather";
+import Constants from "expo-constants";
+import WeatherScreen from "./screen/WeatherScreen";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import ZipCodeScreen from "./screen/ZipCodeScreen";
-import WeatherScreen from "./screen/WeatherScreen";
 
 const Stack = createStackNavigator();
 
